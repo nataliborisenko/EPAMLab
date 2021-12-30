@@ -1,16 +1,13 @@
 package test;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import utils.TestListener;
 
-@Listeners({TestListener.class})
-public class SecondTest {
 
-    @Test
+public class SecondTest extends CommonConditions {
+
+    @Test (testName="SecondTestName")
     public void testMethodSecond(){
         Assert.assertTrue(true);
-
     }
 }

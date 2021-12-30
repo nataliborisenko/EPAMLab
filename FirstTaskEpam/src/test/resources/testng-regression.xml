@@ -6,4 +6,7 @@
             <class name="test.SecondTest" />
         </classes>
     </test>
+    <listeners>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener" />
+    </listeners>
 </suite>
