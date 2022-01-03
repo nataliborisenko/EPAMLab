@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.245 s <<< FAILURE! - in TestSuite
+testMethodOne(test.FirstTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at test.FirstTest.testMethodOne(FirstTest.java:11)
+

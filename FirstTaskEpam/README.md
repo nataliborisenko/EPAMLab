@@ -17,3 +17,5 @@ mvn -Dsurefire.suiteXmlFiles=src\test\resources\testng-smoke.xml clean test
 mvn -Dsuite.file=testng-regression clean test
 mvn -Dsuite.file=testng-smoke clean test
 mvn -Dsuite.file=testng-functional clean test
+
+mvn -Dsuite.file=testng-allTests clean test

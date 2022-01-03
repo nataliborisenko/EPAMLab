@@ -1,0 +1,6 @@
+2022-01-03 00:20:52,014 INFO  [TestNG-tests-1] FirstTestName
+2022-01-03 00:20:52,014 INFO  [TestNG-tests-3] ThirdTestName
+2022-01-03 00:20:52,014 INFO  [TestNG-tests-2] SecondTestName
+2022-01-03 00:20:52,045 INFO  [TestNG-tests-3] Test test.ThirdTest finished successfully
+2022-01-03 00:20:52,045 INFO  [TestNG-tests-2] Test test.SecondTest finished successfully
+2022-01-03 00:20:52,046 ERROR  [TestNG-tests-1] Test test.FirstTest failed 

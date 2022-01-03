@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+    <test name="FirstTest">
+        <classes>
+            <class name="test.FirstTest"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+    <test name="SecondTest">
+        <classes>
+            <class name="test.SecondTest"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+    <test name="ThirdTest">
+        <classes>
+            <class name="test.ThirdTest"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+</suite>

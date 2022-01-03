@@ -5,4 +5,5 @@ import utils.TestListener;
 
 @Listeners({TestListener.class})
 public class CommonConditions {
+
 }
