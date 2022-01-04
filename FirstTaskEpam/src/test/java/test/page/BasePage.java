@@ -1,21 +1,14 @@
-package page;
+package test.page;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import model.User;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import static com.codeborne.selenide.Selenide.$;
 
-
-public class BasePage extends AbstractPage {
+public class BasePage {
     private final SelenideElement fieldToEnterLogin = $(By.name("login"));
     private final SelenideElement fieldToEnterPassword = $(By.name("password"));
-    private final SelenideElement buttonForEnter = $("//*[@class='MuiButton-label']");
-
-    public BasePage(WebDriver webDriver) {
-        super(webDriver);
-    }
 
     public BasePage openHomePage(String url) {
         Selenide.open(url);
@@ -23,10 +16,8 @@ public class BasePage extends AbstractPage {
     }
 
     public MISPPage enterLoginAndPassword(User testUser) {
-        fieldToEnterLogin.setValue(testUser.getUserName());
-        fieldToEnterPassword.setValue(testUser.getPassword());
-        buttonForEnter.click();
-        return new MISPPage(webDriver);
-
+        fieldToEnterLogin.setValue(testUser.getUserName()).pressTab();
+        fieldToEnterPassword.setValue(testUser.getPassword()).pressEnter();
+        return new MISPPage();
     }
 }

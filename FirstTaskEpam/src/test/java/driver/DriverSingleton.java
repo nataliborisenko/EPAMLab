@@ -1,33 +1,28 @@
 package driver;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverSingleton {
-    private static WebDriver webDriver;
-    private DriverSingleton() {}
 
-    public static WebDriver getWebDriver() {
-        if (null == webDriver) {
-            switch (System.getProperty("browser")) {
-                case "chrome": {
-                    WebDriverManager.chromedriver().setup();
-                    webDriver = new ChromeDriver();
-                }
-                case "firefox": {
-                    WebDriverManager.chromedriver().setup();
-                    webDriver = new FirefoxDriver();
-                }
-            }
-            webDriver.manage().window().maximize();
+    public static void getWebDriver() {
+        switch (System.getProperty("browser")) {
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                WebDriverRunner.setWebDriver(new FirefoxDriver());
+                break;
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                WebDriverRunner.setWebDriver(new ChromeDriver());
+                break;
         }
-        return webDriver;
+        WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
-    public static void closeWebDriver(){
-        webDriver.quit();
-        webDriver = null;
+    public static void closeWebDriver() {
+        WebDriverRunner.closeWebDriver();
+
     }
 }
