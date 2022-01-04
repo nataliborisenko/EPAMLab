@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Functional" verbose="1" >
-    <test name="ThirdTest"   >
+<suite name="MISPTest" verbose="1" >
+    <test name="UserAccessTest"   >
         <classes>
-            <class name="test.ThirdTest" />
+            <class name="test.UserAccessTest" />
         </classes>
     </test>
     <listeners>
